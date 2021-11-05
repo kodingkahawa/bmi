@@ -15,7 +15,6 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark().copyWith(
         primaryColor: const Color(0xFF010514),
         scaffoldBackgroundColor: const Color(0xFF040B22),
-
       ),
       home: const HomePage(),
     );

@@ -1,3 +1,4 @@
+import 'package:bodymassindex/Widgets/card.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -11,15 +12,55 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: const [
-          Card(
-            child: Text('male'),
-          ),
-          Card(
-            child: Text('female '),
-          )
-        ],
+      appBar: AppBar(
+        title: const Text('data'),
+        centerTitle: true,
+      ),
+      body: SafeArea(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: const [
+                  ReusableTile(gender: 'Male', icon: Icons.male),
+                  ReusableTile(gender: 'Female', icon: Icons.female)
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Card(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text(
+                      'Height',
+                      style: TextStyle(fontSize: 35),
+                    ),
+                    const Text(
+                      '153cm',
+                      style: TextStyle(fontSize: 25),
+                    ),
+                    Slider(
+                      onChanged: (double value) {},
+                      value: 1,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            const Spacer(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: const [
+                ReusableTile(gender: 'Male', icon: Icons.male),
+                ReusableTile(gender: 'Female', icon: Icons.female)
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
