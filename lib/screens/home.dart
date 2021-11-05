@@ -13,8 +13,9 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('data'),
+        title: const Text('BMI'),
         centerTitle: true,
+        backgroundColor: const Color(0xFF040B22),
       ),
       body: SafeArea(
         child: Column(
@@ -32,6 +33,7 @@ class _HomePageState extends State<HomePage> {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Card(
+                color: const Color(0xFF020F3D),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
